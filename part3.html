@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #F2EAE1;
+        }
+
+        .container{
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .parts{
+            display: flex;
+            gap: 20px;
+        }
+
+        .first{
+            width: 300px;
+            height: 100vh;
+            text-align: center;
+        }
+     
+        .first img{
+            border-radius: 50%;
+        }
+
+        .first b{
+            font-size: 20px;
+        }
+
+        .addmin{
+            color: #ffa600;
+        }
+
+        .links{
+            text-decoration: none;
+            background-color: #FEAF00;
+            color: #333;
+            display: block;
+            width: 100px;
+            margin: 20px auto;
+            padding: 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+
+        .links:hover{
+            transform: scale(1.1);
+            background-color: #ffa600;
+        }
+
+
+        .links:active{
+            background-color: #C47B00;
+            transform: scale(0.95);
+        }
+
+        .log{
+            position: relative;
+            top: 340px;
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            color: black;
+            text-decoration: none;
+        }
+
+        .second{
+            width: 100%;
+            padding: 20px;
+        }
+
+
+        #edit{
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+
+        #edit:hover{
+            transform: scale(1.2);
+        }
+
+
+        #delete{
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+
+        #delete:hover{
+            transform: scale(1.2);
+        }
+
+
+        
+
+        .parts2{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .list{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .two input{
+            padding: 8px;
+        }
+
+
+
+        #search-btn{
+            width: 170px;
+            border-radius: 20px;
+            border-color: rgb(34, 32, 32);
+            transition: all 0.3s ease;
+        }
+
+        #search-btn:hover{
+            transform: scale(1.1);
+        }
+
+
+        #search-btn:active{
+            transform: scale(0.9);
+        }
+
+
+        .btn2{
+            width: 200px;
+            height: 40px;
+            background-color: #FEAF00;
+            border-radius: 10px;
+            border: none;
+            color: white;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+
+
+        .btn2:hover{
+            background-color: #ffa600;
+            cursor: pointer;
+            transform: scale(1.1);
+        }
+
+
+        .btn2:active{
+            background-color: #C47B00;
+            transform: scale(0.95);
+        }
+
+
+        table{
+            width: 100%;
+            border-collapse: collapse;
+
+        }   
+
+        table th{
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+
+        table td{
+             padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+
+        .second{
+            background-color: white;
+        }
+
+
+        .log-out{
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+
+        .log-out:hover{
+            transform: scale(1.2);
+        }
+
+
+        .profile{
+            transition: all 0.3s ease;
+        }
+
+
+        .profile:hover{
+            transform: scale(1.2);
+        }
+
+
+        .face{
+            width: 65px;
+            border-radius: 10px;
+            height: 55px;
+            transition: all 0.3s ease;
+        }
+
+
+
+        .face:hover{
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="parts">
+
+            <div class="first">
+
+                <h1>Admin students</h1>
+                <a href="./part4.html"><img class="profile" src="./pexel.svg" alt="human"></a>
+                <p><b>Karthi Madesh</b></p>
+                <p class="addmin">Admin</p>
+
+                <a class="links" href="./part4.html"><img width="15px" src="./gra.svg" alt=""> Teachers</a>
+
+                <p>
+                    <a class="log" href="part2.html">Log out <img width="15px" src="./out.svg" alt=""></a>
+                </p>
+
+            </div>
+
+            <div class="second">
+                <div class="parts2">
+                    <div class="one">
+                        <a href="part2.html"><img class="log-out" src="./caret.svg" alt="" ></a>
+                    </div>
+
+                    <div class="two">
+                        <input id="search-btn" type="text" placeholder="search...                          🔍">
+                    </div>
+
+                    
+                </div>
+
+                <div class="teachers">
+                    <div class="list">
+                        <div class="par">
+                            <h1>Teachers list</h1>
+                        </div>
+
+                        <div class="par2">
+                            <button class="btn2" onclick="location.href='part5.html'">ADD NEW STUDENT</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <table id="table">
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>email</th>
+                        <th>phone</th>
+                        <th>Enroll number</th>
+                        <th>Date admission</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                
+                    <tr>
+                        <td><img class="face" src="./profile.svg" alt=""></td>
+                        <td>Karthi</td>
+                        <td>karthi@gmmail.com</td>
+                        <td>7305477760</td>
+                        <td>1234567305477760</td>
+                        <td>08-Dec, 2021</td>
+                        <td><img id="edit" src="./Vector.svg" alt=""></td>
+                        <td><img id="delete" src="./trash.svg" alt=""></td>
+                    </tr>
+                
+                    <tr>
+                        <td><img class="face" src="./image.png" alt=""></td>
+                        <td>lakshman</td>
+                        <td>lakshman@gmmail.com</td>
+                        <td>1938290372</td>
+                        <td>2734909428473892</td>
+                        <td>19-Jun, 2023</td>
+                        <td><img id="edit" src="./Vector.svg" alt=""></td>
+                        <td><img id="delete" src="./trash.svg" alt=""></td>
+                    </tr>
+                
+                    <tr>
+                        <td><img class="face" src="./imagecopy.png" alt=""></td>
+                        <td>kapur</td>
+                        <td>kapur@gmmail.com</td>
+                        <td>4839032208</td>
+                        <td>0280918360432847</td>
+                        <td>01-Aug, 2021</td>
+                        <td><img id="edit" src="./Vector.svg" alt=""></td>
+                        <td><img id="delete" src="./trash.svg" alt=""></td>
+                    </tr>
+                
+                    <tr>
+                        <td><img class="face" src="./imagecopy2.png" alt=""></td>
+                        <td>mali</td>
+                        <td>mali@gmmail.com</td>
+                        <td>8932461280</td>
+                        <td>8796056341739280</td>
+                        <td>26-May, 2019</td>
+                        <td><img id="edit" src="./Vector.svg" alt=""></td>
+                        <td><img id="delete" src="./trash.svg" alt=""></td>
+                    </tr>
+                
+                    <tr>
+                        <td><img class="face" src="./imagecopy3.png" alt=""></td>
+                        <td>senme</td>
+                        <td>senme@gmmail.com</td>
+                        <td>9876543210</td>
+                        <td>9876543210987654</td>
+                        <td>15-Aug, 2020</td>
+                        <td><img id="edit" src="./Vector.svg" alt=""></td>
+                        <td><img id="delete" src="./trash.svg" alt=""></td>
+                    </tr>
+                
+                    <tr>
+                        <td><img class="face" src="./profile.svg" alt=""></td>
+                        <td>qeruy</td>
+                        <td>qeruy@gmmail.com</td>
+                        <td>9876543210</td>
+                        <td>9876543210987654</td>
+                        <td>15-Apr, 2017</td>
+                        <td><img id="edit" src="./Vector.svg" alt=""></td>
+                        <td><img id="delete" src="./trash.svg" alt=""></td>
+                    </tr>
+                
+                    <tr>
+                        <td><img class="face" src="./imagecopy4.png" alt=""></td>
+                        <td>derish</td>
+                        <td>derish@gmmail.com</td>
+                        <td>0967371974</td>
+                        <td>8291740739251847</td>
+                        <td>30-Jan, 2009</td>
+                        <td><img id="edit" src="./Vector.svg" alt=""></td>
+                        <td><img id="delete" src="./trash.svg" alt=""></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+<script>
+    const searchInput = document.getElementById("search-btn");
+    const table = document.getElementById("table");
+    const rows = table.getElementsByTagName("tr");
+
+    searchInput.addEventListener("input", function() {
+        const filter = searchInput.value.toLowerCase();
+
+        for (let i = 1; i < rows.length; i++) {
+            const cells = rows[i].getElementsByTagName('td');
+            let found = false;
+
+            for (let j = 0; j < cells.length; j++) {
+                if (cells[j].textContent.toLowerCase().includes(filter)) {
+                    found = true;
+                    break;
+                }
+            }
+
+            rows[i].style.display = found ? '' : 'none';
+        }
+    });
+
+
+    function addEditEvent(button){
+        button.addEventListener("click", function() {
+            let row = button.parentElement.parentElement;
+
+            let name = prompt("Enter new name:", row.cells[1].textContent);
+            let email = prompt("Enter new email:", row.cells[2].textContent);
+            let phone = prompt("Enter new phone:", row.cells[3].textContent);
+            let enrollNumber = prompt("Enter new enroll number:", row.cells[4].textContent);
+            let dateAdmission = prompt("Enter new date of admission:", row.cells[5].textContent);
+
+            if (name) row.cells[1].textContent = name;
+            if (email) row.cells[2].textContent = email;
+            if (phone) row.cells[3].textContent = phone;
+            if (enrollNumber) row.cells[4].textContent = enrollNumber;
+            if (dateAdmission) row.cells[5].textContent = dateAdmission;
+        });
+    }
+
+    function addDeleteEvent(button){
+        button.addEventListener("click", function() {
+            let row = button.parentElement.parentElement;
+
+            if (confirm("Are you sure you want to delete this student?")) {
+                row.remove();
+            }
+        });
+    }
+
+    function loadEvents() {
+        let editButtons = document.querySelectorAll("#edit");
+        editButtons.forEach(function(button) {
+            addEditEvent(button);
+        });
+
+        let deleteButtons = document.querySelectorAll("#delete");
+        deleteButtons.forEach(function(button) {
+            addDeleteEvent(button);
+        });
+    }
+
+    loadEvents();
+
+
+    let name = localStorage.getItem("name");
+    let email = localStorage.getItem("email");
+    let phone = localStorage.getItem("phone");
+    let enroll = localStorage.getItem("enroll");
+    let date = localStorage.getItem("date");
+
+    if(name){
+        table.innerHTML += `
+        <tr>
+            <td><img class="face" src="./imagecopy5.png" alt=""></td>
+            <td>${name}</td>
+            <td>${email}</td>
+            <td>${phone}</td>
+            <td>${enroll}</td>
+            <td>${date}</td>
+            <td><img id="edit" src="./Vector.svg" alt=""></td>
+            <td><img id="delete" src="./trash.svg" alt=""></td>
+        </tr>
+        `;
+
+        loadEvents();
+
+        localStorage.removeItem("name");
+        localStorage.removeItem("email");
+        localStorage.removeItem("phone");
+        localStorage.removeItem("enroll");
+        localStorage.removeItem("date");
+    }
+
+
+    
+</script>
+</body>
+</html>

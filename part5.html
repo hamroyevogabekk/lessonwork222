@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student</title>
+
+    <style>
+       
+
+        body{
+            background-color: #F2EAE1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card{
+            width: 400px;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        h1{
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        input{
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus{
+            border-color: #FEAF00;
+        }
+
+        button{
+            width: 100%;
+            padding: 14px;
+            background-color: #FEAF00;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover{
+            background-color: #ffa600;
+            transform: scale(1.03);
+        }
+
+        button:active{
+            transform: scale(0.97);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Add New Student</h1>
+
+        <input type="text" id="name" placeholder="Enter name">
+
+        <input type="email" id="email" placeholder="Enter email">
+
+        <input type="text" id="phone" placeholder="Enter phone number">
+
+        <input type="text" id="enroll" placeholder="Enter enroll number">
+
+        <input type="date" id="date">
+
+        <button onclick="saveStudent()">Save Student</button>
+    </div>
+
+    <script>
+        function saveStudent() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let enroll = document.getElementById("enroll").value;
+            let date = document.getElementById("date").value;
+
+            localStorage.setItem("name", name);
+            localStorage.setItem("email", email);
+            localStorage.setItem("phone", phone);
+            localStorage.setItem("enroll", enroll);
+            localStorage.setItem("date", date);
+
+            window.location.href = "part3.html";
+        }
+    </script>
+
+</body>
+</html>

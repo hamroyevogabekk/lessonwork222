@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in</title>
+    <style>
+        body{
+            background-color: #FEAF00;
+        }
+
+        .container{
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .signIn{
+            width: 520px;
+            height: 520px;
+            background-color: white;
+            border-radius: 20px;
+            margin: 0 auto;
+            margin-top: 70px;
+        }
+
+        .signIn h1{
+            text-align: center;
+            padding-top: 20px;
+            font-size: 44px;
+        }
+
+        .signIn h2{
+            text-align: center;
+            font-size: 32px;
+        }
+
+        .signIn p{
+            text-align: center;
+            font-size: 21px;
+        }
+
+        .Form label{
+            font-size: 28px;
+            position: relative;
+            left: 60px;
+        }
+
+        .Form input{
+            width: 405px;
+            height: 33px;
+            font-size: 20px;
+            padding: 5px;
+            position: relative;
+            left: 50px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .Form input:active{
+            border: 2px solid #C47B00;
+            transform: scale(0.95);
+        }
+
+        #btn{
+            width: 416px;
+            height: 50px;
+            padding: 5px;
+            font-size: 20px;
+            font-weight: bold;
+            position: relative;
+            left: 53px;
+            top: 10px;
+            background-color: #FEAF00;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        #btn:hover{
+            background-color: #E59400;
+            transform: scale(0.95);
+        }
+
+        #btn:active{
+            background-color: #C47B00;
+            transform: scale(1.1);
+        }
+
+        .signUp a{
+            position: relative;
+            bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="signIn">
+            <h1>Admin Students</h1>
+            <h2>sign in</h2>
+            <p>Enter your credentials to access your account</p>
+
+            <form class="Form">
+                <label for="username">enter your username</label><br>
+                <input type="text" id="username" name="username" placeholder="Username" required><br><br>
+
+                <label for="password">enter your password</label><br>
+                <input type="password" id="password" name="password" placeholder="Password" required><br><br>
+
+                <button type="submit" id="btn">Sign In</button>
+                <p><a href="index.html">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let forma = document.querySelector(".Form");
+
+        forma.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let pass1 = localStorage.getItem("password");
+            let name = document.getElementById("username").value;
+            let pass = document.getElementById("password").value;
+
+            if (name !== "" && pass === pass1) {
+                alert("Login successful!");
+                window.location.href = "part3.html";
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        });
+    </script>
+</body>
+</html>
